@@ -1,0 +1,26 @@
+// create package.json
+npm init
+// install react & react-dom and save depenedencies to pacakge.json
+npm i react react-dom --save
+// install babel & webpack
+npm i babel webpack webpack-dev-server
+// babel loader etc
+npm i babel-loader babel-core babel-preset-es2015 babel-preset-react --save-dev
+
+// create files
+touch index.html App.js main.js webpack.config.js
+
+// configure webpack.config.js 
+
+// change index.html
+// add div element with id of 'app'
+// add script tag with source pointing to index.js 
+// (which is built based on output location setup in webpack.config.js)
+
+// create App component in App.js
+
+// in main.js
+// import react, react-dom , App
+// ReactDOM.render <App/>
+
+
