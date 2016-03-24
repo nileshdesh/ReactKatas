@@ -6,7 +6,8 @@ class PageBuilder extends React.Component {
         super();
     }
     render() {
-        var source = JSON.parse(this.props.source ? this.props.source : '{"tag": "input", "children": []}');
+        var source = JSON.parse(this.props.source ? this.props.source : '{"tag": "input"}');
+        debugger
         var element = createElements(source);
 
         return element;
@@ -23,8 +24,10 @@ function createElements(element) {
         });
         return React.createElement(element.tag, element.attrs, childElements);
     }
-    var content = element.content ? element.content : '';
-    return (<element.tag {...element.attrs}>{content}</element.tag>)
+    if (element.content)
+        return (<element.tag {...element.attrs}>{element.content}</element.tag>)
+    else
+        return (<element.tag {...element.attrs}/>)
 }
 
 export default PageBuilder;

@@ -9,6 +9,7 @@ class App extends React.Component {
     }
     update(e) {
         var newState = {};
+        debugger;
         newState[e.target.attributes['data-ref'].value] = e.target.value ;
         this.setState(newState);        
     }
