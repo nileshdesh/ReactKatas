@@ -1,0 +1,76 @@
+[
+    {
+        "tag": "select",
+        "children": [
+            {
+                "tag": "option",
+                "content": "hello",
+                "attrs": {
+                    "value": "1"
+                }
+            },
+            {
+                "tag": "option",
+                "content": "world",
+                "attrs": {
+                    "value": "2"
+                }
+            },
+            {
+                "tag": "option",
+                "content": "",
+                "attrs": {
+                    "value": "3"
+                }
+            }
+        ]
+    },
+    {
+        "tag": "form",
+        "attrs": {
+            "method": "POST",
+            "action": "/"
+        },
+        "children": [
+            {
+                "tag": "fieldset",
+                "attrs": {
+                    "className": "test"
+                },
+                "children": [
+                    {
+                        "tag": "input",
+                        "attrs": {
+                            "type": "text"
+                        },
+                        "text": "hello",
+                        "value": "1"
+                    },
+                    {
+                        "tag": "input",
+                        "attrs": {
+                            "type": "password"
+                        },
+                        "text": "world",
+                        "value": "2"
+                    },
+                    {
+                        "tag": "input",
+                        "attrs": {
+                            "type": "submit"
+                        },
+                        "text": "Save",
+                        "value": "save"
+                    },
+                    {
+                        "tag": "input",
+                        "attrs": {
+                            "type": "reset"
+                        },
+                        "text": "world"
+                    }
+                ]
+            }
+        ]
+    }
+]

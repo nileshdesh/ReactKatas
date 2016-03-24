@@ -1,4 +1,6 @@
 import React from 'react';
+import PageBuilder from './widgets/pageBuilder';
+
 class App extends React.Component {
     constructor() {
         super();
@@ -13,12 +15,21 @@ class App extends React.Component {
     render() {
         let title = this.state.title;
         let template = this.state.template;
+        var style = {width: '97%', tableLayout: 'fixed', height: '400px' };
         return (
             <div>
-                <h1>{title}</h1>
-                <input type="text" data-ref="title" onChange={this.update.bind(this)}/> 
-                <h3>{template}</h3>
-                <input type="text" data-ref="template" onChange={this.update.bind(this)}/> 
+                <table style={style}>
+                    <tbody>
+                        <tr>
+                            <td >
+                                <textarea data-ref="source" onBlur={this.update.bind(this)} style={style}/> 
+                            </td>
+                            <td>
+                            <PageBuilder {...this.state} style={style}/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         );
     }
