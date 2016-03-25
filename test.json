@@ -1,32 +1,6 @@
-[
-    {
-        "tag": "select",
-        "children": [
-            {
-                "tag": "option",
-                "content": "hello",
-                "attrs": {
-                    "value": "1"
-                }
-            },
-            {
-                "tag": "option",
-                "content": "world",
-                "attrs": {
-                    "value": "2"
-                }
-            },
-            {
-                "tag": "option",
-                "content": "",
-                "attrs": {
-                    "value": "3"
-                }
-            }
-        ]
-    },
     {
         "tag": "form",
+        "key": "tst",
         "attrs": {
             "method": "POST",
             "action": "/"
@@ -34,6 +8,7 @@
         "children": [
             {
                 "tag": "fieldset",
+        "key": "tst1",
                 "attrs": {
                     "className": "test"
                 },
@@ -43,24 +18,50 @@
                         "attrs": {
                             "type": "text"
                         },
-                        "text": "hello",
-                        "value": "1"
+                        "text": "hello"
                     },
                     {
                         "tag": "input",
                         "attrs": {
                             "type": "password"
                         },
-                        "text": "world",
-                        "value": "2"
+                        "text": "world"
+                    },
+                    {
+                        "tag": "select",
+                        "attrs": {
+                            "defaultValue": 3
+                        },
+                        "children": [
+                            {
+                                "tag": "option",
+                                "content": "hello",
+                                "attrs": {
+                                    "value": "1"
+                                }
+                            },
+                            {
+                                "tag": "option",
+                                "content": "world",
+                                "attrs": {
+                                    "value": "2"
+                                }
+                            },
+                            {
+                                "tag": "option",
+                                "content": "",
+                                "attrs": {
+                                    "value": "3"
+                                }
+                            }
+                        ]
                     },
                     {
                         "tag": "input",
                         "attrs": {
                             "type": "submit"
                         },
-                        "text": "Save",
-                        "value": "save"
+                        "text": "Save"
                     },
                     {
                         "tag": "input",
@@ -73,4 +74,3 @@
             }
         ]
     }
-]
